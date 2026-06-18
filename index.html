@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Voyage à Bruxelles — Yassir & Ilyas</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-blue: #38bdf8;
+            --accent-orange: #f97316;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #0f172a);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-blue);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-main);
+            text-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-orange);
+            padding-left: 15px;
+            color: #f8fafc;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--accent-blue);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .speaker-badge {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background-color: rgba(56, 189, 248, 0.2);
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
+        }
+
+        .fr-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .nl-text {
+            font-size: 1rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 10px;
+        }
+
+        .img-container {
+            margin-top: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .img-container img {
+            width: 100%;
+            display: block;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .img-container img:hover {
+            transform: scale(1.02);
+        }
+
+        .audio-player {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .quiz-container {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .quiz-item {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .quiz-item:last-child {
+            border-bottom: none;
+        }
+
+        .quiz-q {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .quiz-a {
+            color: var(--accent-blue);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Travel Brussel</h1>
+        <p>Présentation par Yassir Abbou et Ilyas — Classe 2HV</p>
+    </header>
+
+    <div class="container">
+
+        <div class="section-title">Partie 1: L'Introduction</div>
+        
+        <div class="card">
+            <h3>Yassir <span class="speaker-badge">Français</span></h3>
+            <p class="fr-text">"Bonjour madame, bonjour la classe. Bienvenue à notre présentation sur Bruxelles. Voici notre groupe : Yassir et Ilyas."</p>
+            <p class="nl-text"><strong>Toelichting (NL):</strong> Op deze dia zien jullie onze titelpagina 'TRAVEL BRUSSEL'. We have de opdrachten netjes verdeeld per pagina.</p>
+        </div>
+
+        <div class="card">
+            <h3>Ilyas <span class="speaker-badge" style="background-color: rgba(249, 115, 22, 0.2); color: var(--accent-orange); border-color: var(--accent-orange);">Français</span></h3>
+            <p class="fr-text">"Nous avons voyagé en bus avec la classe en juillet. Le voyage a commencé à sept heures du matin. C'était super !"</p>
+        </div>
+
+        <div class="section-title">Partie 2: Les Monuments et L'Action</div>
+
+        <div class="card">
+            <h3>Yassir <span class="speaker-badge">Français</span></h3>
+            <p class="fr-text">"Nous sommes arrivés à dix heures. D'abord, nous avons visité la belle Grand-Place. Notre journée a commencé tranquillement ici."</p>
+            <div class="img-container">
+                <img src="grote_markt.jpg" alt="Grote Markt">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Ilyas <span class="speaker-badge" style="background-color: rgba(249, 115, 22, 0.2); color: var(--accent-orange); border-color: var(--accent-orange);">Français</span></h3>
+            <p class="fr-text">"Après, nous avons marché vers le Palais Royal. Mais, il y a eu de graves émeutes avec la police dans la rue ! C'était très impressionnant !"</p>
+            <p class="nl-text"><strong>Toelichting (NL):</strong> Hier lichten we de locaties toe: links de Stripmuur voor de Photo Challenge, in het midden de Grote Markt en de rellen bij het paleis.</p>
+            <div class="img-container">
+                <img src="stripmuur.jpg" alt="Stripmuur">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Yassir <span class="speaker-badge">Français</span></h3>
+            <p class="fr-text">"Puis, nous avons cherché la statue de Manneken Pis. Nous posons ensemble devant la barrière."</p>
+            <div class="img-container">
+                <img src="manneken_pis.jpg" alt="Manneken Pis">
+            </div>
+        </div>
+
+        <div class="section-title">Partie 3: Le Déjeuner et Mission Baguette</div>
+
+        <div class="card">
+            <h3>Yassir <span class="speaker-badge">Français</span></h3>
+            <p class="fr-text">"À midi, nous avons eu très faim. Nous avons déjeuné dans un bon restaurant avec Mehmet, Umut et les garçons de 2VG1."</p>
+            <p class="nl-text"><strong>Toelichting (NL):</strong> Dit is de pagina van de challenges: de Rolex-etalage challenge en onze lunch als Belgische smaaktest.</p>
+            <div class="img-container">
+                <img src="etalage.jpg" alt="Etalage Challenge">
+            </div>
+            <div class="img-container" style="margin-top:10px;">
+                <img src="smaaktest.jpg" alt="Belgische Smaaktest">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Ilyas <span class="speaker-badge" style="background-color: rgba(249, 115, 22, 0.2); color: var(--accent-orange); border-color: var(--accent-orange);">Français</span></h3>
+            <p class="fr-text">"Après, nous sommes allés acheter une baguette française traditionnelle. Nous avons fait un enregistrement audio. Écoutez notre audio :"</p>
+            
+            <audio class="audio-player" controls>
+                <source src="audio_baguette.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="img-container">
+                <img src="baguette.jpg" alt="Baguette">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Yassir <span class="speaker-badge">Français</span></h3>
+            <p class="fr-text">"Enfin, nous avons trouvé Jeanneke Pis, la petite sœur. Nous faisons 'chut' pour la photo."</p>
+            <div class="img-container">
+                <img src="jeanneke_pis.jpg" alt="Jeanneke Pis">
+            </div>
+        </div>
+
+        <div class="section-title">Partie 4: Taal-Detective & La Mosquée</div>
+
+        <div class="card">
+            <h3>Yassir <span class="speaker-badge">Français</span></h3>
+            <p class="fr-text">"Nous sommes aussi des 'Taal-Detectives'. À Bruxelles, nous avons analysé de nombreux panneaux de rue bilingues."</p>
+            <div class="img-container">
+                <img src="taal_detective.jpg" alt="Taal-Detective">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Ilyas <span class="speaker-badge" style="background-color: rgba(249, 115, 22, 0.2); color: var(--accent-orange); border-color: var(--accent-orange);">Français</span></h3>
+            <p class="fr-text">"Voici notre liste : 1. Rue Charles Buls, 2. Saint-Jean, 3. Rue de la Tête-d'Or, 4. Grand-Place, 5. Pachéco."</p>
+            <p class="nl-text"><strong>Toelichting (NL):</strong> Hier zie je de foto's van de tweetalige bordjes die we hebben onderzocht in de stad.</p>
+        </div>
+
+        <div class="card">
+            <h3>Yassir <span class="speaker-badge">Français</span></h3>
+            <p class="fr-text">"L'après-midi, il a beaucoup plu. Nous sommes allés dans une mosquée du quartier pour le gebed en om te schuilen."</p>
+        </div>
+
+        <div class="section-title">Partie 5: Mission Boulangerie & Fin</div>
+
+        <div class="card">
+            <h3>Yassir <span class="speaker-badge">Français</span></h3>
+            <p class="fr-text">"Pour la 'Mission A', nous avons trouvé un pain au chocolat. Le prix est : deux euros et cinquante centimes."</p>
+            <p class="nl-text"><strong>Toelichting (NL):</strong> Op deze laatste dia staat de Franse prijs van het chocoladebroodje volledig in woorden opgeschreven voor de bakker-opdracht (€2,50).</p>
+        </div>
+
+        <div class="card">
+            <h3>Ilyas <span class="speaker-badge" style="background-color: rgba(249, 115, 22, 0.2); color: var(--accent-orange); border-color: var(--accent-orange);">Français</span></h3>
+            <p class="fr-text">"À seize heures, nous nous sommes rassemblés avec la classe. Nous sommes retournés aux Pays-Bas en bus. C'était une excellente journée !"</p>
+        </div>
+
+        <div class="card">
+            <h3>Ensemble <span class="speaker-badge" style="background-color:rgba(16, 185, 129, 0.2); color:#10b981; border-color:#10b981;">Fin</span></h3>
+            <p class="fr-text" style="text-align: center; font-size: 1.5rem; color: var(--accent-blue); font-weight: bold;">"Merci beaucoup pour votre attention ! Est-ce qu'il y a des questions ?"</p>
+        </div>
+
+        <div class="section-title">Bonus: Bruxelles Quiz & Réflexion</div>
+        <div class="quiz-container">
+            <div class="quiz-item">
+                <p class="quiz-q">1. De Grote Markt staat op de UNESCO-werelderfgoedlijst?</p>
+                <p class="quiz-a"><strong>Waar:</strong> Door het vele goud!</p>
+            </div>
+            <div class="quiz-item">
+                <p class="quiz-q">2. Manneken Pis heeft meer dan 900 verschillende kostuums?</p>
+                <p class="quiz-a"><strong>Waar:</strong> Er zijn er maar liefst 1200!</p>
+            </div>
+            <div class="quiz-item">
+                <p class="quiz-q">3. Het Koninklijk Paleis van Brussel wordt nog steeds gebruikt door de koning?</p>
+                <p class="quiz-a"><strong>Niet waar:</strong> Was afgesloten door de rellen.</p>
+            </div>
+            <div class="quiz-item" style="margin-top:15px; padding-top:15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                <p class="quiz-q" style="color:var(--accent-orange)">Reflectie: Wat vonden jullie het leukst?</p>
+                <p class="quiz-a" style="color:var(--text-main)">"Het rondlopen met vrienden en de vrijheid om de opdrachten op je eigen tempo te doen en de vrije tijd waarin je Brussel echt goed kon ontdekken."</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Yassir & Ilyas. Fait avec de la fierté pour le Gerrit Rietveld College.</p>
+    </footer>
+
+</body>
+</html>
