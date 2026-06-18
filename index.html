@@ -3,144 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notre Voyage à Bruxelles — Yassir & Ilyas</title>
+    <title>Voyage à Bruxelles — Yassir & Ilyas</title>
     <style>
         :root {
-            --bg-color: #0f172a;
+            --bg-dark: #0f172a;
             --card-bg: #1e293b;
-            --accent-blue: #38bdf8;
-            --accent-orange: #f97316;
-            --text-main: #f1f5f9;
+            --accent-green: #deff9a;
+            --text-light: #f8fafc;
             --text-muted: #94a3b8;
+            --border-color: rgba(222, 255, 154, 0.2);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            padding-bottom: 60px;
+            padding: 0;
         }
 
         header {
-            background: linear-gradient(135deg, #1e3a8a, #0f172a);
-            padding: 60px 20px;
+            background: linear-gradient(135deg, #020617, #1e293b);
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 4px solid var(--accent-blue);
+            border-bottom: 2px solid var(--accent-green);
         }
 
         header h1 {
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-main);
-            text-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            font-size: 3.5rem;
+            color: var(--text-light);
+            letter-spacing: -1px;
             margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        header h1 span {
+            color: var(--accent-green);
         }
 
         header p {
-            font-size: 1.2rem;
-            color: var(--accent-blue);
-            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--text-muted);
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
         .section-title {
-            font-size: 1.8rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-left: 5px solid var(--accent-orange);
+            font-size: 2rem;
+            margin: 50px 0 25px 0;
+            color: var(--text-light);
+            border-left: 5px solid var(--accent-green);
             padding-left: 15px;
-            color: #f8fafc;
         }
 
-        .card {
+        /* Photo Grid Layouts */
+        .photo-grid {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        .photo-card {
+            display: table-cell;
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .img-wrapper {
+            background-color: #020617;
+            border-radius: 8px;
+            height: 240px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-card h3 {
+            font-size: 1.25rem;
+            color: var(--accent-green);
+            text-transform: capitalize;
+        }
+
+        /* Mission Styles */
+        .mission-box {
             background-color: var(--card-bg);
             border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255,255,255,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: var(--accent-blue);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .price-tag {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--accent-green);
+            text-align: center;
+            margin: 20px 0;
         }
 
-        .speaker-badge {
-            font-size: 0.8rem;
-            padding: 4px 10px;
-            border-radius: 20px;
-            background-color: rgba(56, 189, 248, 0.2);
-            color: var(--accent-blue);
-            border: 1px solid var(--accent-blue);
-        }
-
-        .fr-text {
-            font-size: 1.2rem;
+        .french-phrase {
+            font-size: 1.5rem;
             font-style: italic;
-            color: #fff;
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-
-        .nl-text {
-            font-size: 1rem;
-            color: var(--text-muted);
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 10px;
-        }
-
-        .img-container {
-            margin-top: 15px;
+            text-align: center;
+            color: var(--text-light);
+            background: rgba(222, 255, 154, 0.05);
+            padding: 15px;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,255,255,0.1);
+            border-left: 4px solid var(--accent-green);
+            margin: 20px 0;
         }
 
-        .img-container img {
-            width: 100%;
-            display: block;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .img-container img:hover {
-            transform: scale(1.02);
-        }
-
-        .audio-player {
-            width: 100%;
-            margin-top: 15px;
-        }
-
-        .quiz-container {
-            background-color: #1e293b;
-            padding: 25px;
+        /* Table Design */
+        .table-container {
+            background-color: var(--card-bg);
             border-radius: 12px;
-            margin-top: 30px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(222, 255, 154, 0.1);
+            color: var(--accent-green);
+            padding: 18px;
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--accent-green);
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 1.1rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Quiz Layout */
+        .quiz-container {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-between: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .quiz-item {
             padding: 15px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .quiz-item:last-child {
@@ -148,171 +188,249 @@
         }
 
         .quiz-q {
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 8px;
         }
 
         .quiz-a {
-            color: var(--accent-blue);
+            font-size: 1.05rem;
+            padding-left: 20px;
+        }
+
+        .quiz-a.waar {
+            color: var(--accent-green);
+        }
+
+        .quiz-a.niet-waar {
+            color: #f43f5e;
+        }
+
+        .quiz-explain {
+            color: var(--text-muted);
             font-size: 0.95rem;
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* Reflection Blocks */
+        .reflection-grid {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 20px 0;
+        }
+
+        .reflection-card {
+            display: table-cell;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            vertical-align: top;
+        }
+
+        .reflection-card h4 {
+            color: var(--accent-green);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .quote-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--accent-green);
+            padding: 20px;
+            font-size: 1.2rem;
+            font-style: italic;
+            border-radius: 4px;
+            margin-top: 15px;
         }
 
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 60px 20px;
+            background-color: #020617;
             color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 80px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Travel Brussel</h1>
-        <p>Présentation par Yassir Abbou et Ilyas — Classe 2HV</p>
+        <h1>Voyage à <span>Bruxelles</span></h1>
+        <p>Yassir en Ilyas — Website van de Presentatie</p>
     </header>
 
     <div class="container">
 
-        <div class="section-title">Partie 1: L'Introduction</div>
-        
-        <div class="card">
-            <h3>Yassir <span class="speaker-badge">Français</span></h3>
-            <p class="fr-text">"Bonjour madame, bonjour la classe. Bienvenue à notre présentation sur Bruxelles. Voici notre groupe : Yassir et Ilyas."</p>
-            <p class="nl-text"><strong>Toelichting (NL):</strong> Op deze dia zien jullie onze titelpagina 'TRAVEL BRUSSEL'. We have de opdrachten netjes verdeeld per pagina.</p>
-        </div>
-
-        <div class="card">
-            <h3>Ilyas <span class="speaker-badge" style="background-color: rgba(249, 115, 22, 0.2); color: var(--accent-orange); border-color: var(--accent-orange);">Français</span></h3>
-            <p class="fr-text">"Nous avons voyagé en bus avec la classe en juillet. Le voyage a commencé à sept heures du matin. C'était super !"</p>
-        </div>
-
-        <div class="section-title">Partie 2: Les Monuments et L'Action</div>
-
-        <div class="card">
-            <h3>Yassir <span class="speaker-badge">Français</span></h3>
-            <p class="fr-text">"Nous sommes arrivés à dix heures. D'abord, nous avons visité la belle Grand-Place. Notre journée a commencé tranquillement ici."</p>
-            <div class="img-container">
-                <img src="grote_markt.jpg" alt="Grote Markt">
+        <!-- Devoir 3: Les Moments -->
+        <div class="section-title">Enregistrez les moments pour le devoir 3</div>
+        <div class="photo-grid">
+            <div class="photo-card">
+                <div class="img-wrapper">
+                    <img src="stripmuur.jpg" alt="Strip Muur">
+                </div>
+                <h3>Strip Muur</h3>
+            </div>
+            <div class="photo-card">
+                <div class="img-wrapper">
+                    <img src="grote_markt.jpg" alt="Grote-Markt">
+                </div>
+                <h3>Grote-Markt</h3>
+            </div>
+            <div class="photo-card">
+                <div class="img-wrapper">
+                    <img src="manneken_pis.jpg" alt="Manneken Pis">
+                </div>
+                <h3>Manneken Pis</h3>
             </div>
         </div>
 
-        <div class="card">
-            <h3>Ilyas <span class="speaker-badge" style="background-color: rgba(249, 115, 22, 0.2); color: var(--accent-orange); border-color: var(--accent-orange);">Français</span></h3>
-            <p class="fr-text">"Après, nous avons marché vers le Palais Royal. Mais, il y a eu de graves émeutes avec la police dans la rue ! C'était très impressionnant !"</p>
-            <p class="nl-text"><strong>Toelichting (NL):</strong> Hier lichten we de locaties toe: links de Stripmuur voor de Photo Challenge, in het midden de Grote Markt en de rellen bij het paleis.</p>
-            <div class="img-container">
-                <img src="stripmuur.jpg" alt="Stripmuur">
+        <!-- Devoir 3: Challenges -->
+        <div class="section-title">Enregistrez les moments pour le devoir 3 (Challenges)</div>
+        <div class="photo-grid">
+            <div class="photo-card">
+                <div class="img-wrapper">
+                    <img src="etalage.jpg" alt="Etalage Challenge">
+                </div>
+                <h3>Etalage Chalenge</h3>
+            </div>
+            <div class="photo-card">
+                <div class="img-wrapper">
+                    <img src="smaaktest.jpg" alt="Belgische Smaaktest">
+                </div>
+                <h3>Belgische Smaaktest</h3>
+            </div>
+            <div class="photo-card">
+                <div class="img-wrapper">
+                    <img src="wafel.jpg" alt="Wafel-verleiding">
+                </div>
+                <h3>Wafel-verleiding</h3>
+            </div>
+            <div class="photo-card">
+                <div class="img-wrapper">
+                    <img src="jeanneke_pis.jpg" alt="Jeaneke Pis">
+                </div>
+                <h3>Jeaneke Pis</h3>
             </div>
         </div>
 
-        <div class="card">
-            <h3>Yassir <span class="speaker-badge">Français</span></h3>
-            <p class="fr-text">"Puis, nous avons cherché la statue de Manneken Pis. Nous posons ensemble devant la barrière."</p>
-            <div class="img-container">
-                <img src="manneken_pis.jpg" alt="Manneken Pis">
-            </div>
+        <!-- Mission: Boulangerie -->
+        <div class="section-title">Mission: Boulangerie & Bestellen</div>
+        <div class="mission-box">
+            <h3>Pain au Chocolat</h3>
+            <div class="price-tag">€2,50</div>
+            <div class="french-phrase">"Pour deux euros et cinquante centimes"</div>
+            <p style="text-align: center; color: var(--text-muted); margin-top: 15px;">
+                <strong>Bestel iets in het Frans:</strong> Gebruik de audio-opname (audio_baguette.mp3) als bewijs bij deze opdracht.
+            </p>
         </div>
 
-        <div class="section-title">Partie 3: Le Déjeuner et Mission Baguette</div>
-
-        <div class="card">
-            <h3>Yassir <span class="speaker-badge">Français</span></h3>
-            <p class="fr-text">"À midi, nous avons eu très faim. Nous avons déjeuné dans un bon restaurant avec Mehmet, Umut et les garçons de 2VG1."</p>
-            <p class="nl-text"><strong>Toelichting (NL):</strong> Dit is de pagina van de challenges: de Rolex-etalage challenge en onze lunch als Belgische smaaktest.</p>
-            <div class="img-container">
-                <img src="etalage.jpg" alt="Etalage Challenge">
-            </div>
-            <div class="img-container" style="margin-top:10px;">
-                <img src="smaaktest.jpg" alt="Belgische Smaaktest">
-            </div>
+        <!-- Mission: Taal-Detective -->
+        <div class="section-title">Mission: Taal-Detective</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Français</th>
+                        <th>Nederlands</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Rue Charles Buls</strong></td>
+                        <td>Karel Buls Straat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Saint-Jean</strong></td>
+                        <td>Sint-Jans</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rue de la Tête-d'Or</strong></td>
+                        <td>Gulden Hoofd Straat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pachéco</strong></td>
+                        <td>Pacheco</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grand-Place</strong></td>
+                        <td>Grote Markt</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <div class="card">
-            <h3>Ilyas <span class="speaker-badge" style="background-color: rgba(249, 115, 22, 0.2); color: var(--accent-orange); border-color: var(--accent-orange);">Français</span></h3>
-            <p class="fr-text">"Après, nous sommes allés acheter une baguette française traditionnelle. Nous avons fait un enregistrement audio. Écoutez notre audio :"</p>
-            
-            <audio class="audio-player" controls>
-                <source src="audio_baguette.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-            <div class="img-container">
-                <img src="baguette.jpg" alt="Baguette">
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Yassir <span class="speaker-badge">Français</span></h3>
-            <p class="fr-text">"Enfin, nous avons trouvé Jeanneke Pis, la petite sœur. Nous faisons 'chut' pour la photo."</p>
-            <div class="img-container">
-                <img src="jeanneke_pis.jpg" alt="Jeanneke Pis">
-            </div>
-        </div>
-
-        <div class="section-title">Partie 4: Taal-Detective & La Mosquée</div>
-
-        <div class="card">
-            <h3>Yassir <span class="speaker-badge">Français</span></h3>
-            <p class="fr-text">"Nous sommes aussi des 'Taal-Detectives'. À Bruxelles, nous avons analysé de nombreux panneaux de rue bilingues."</p>
-            <div class="img-container">
-                <img src="taal_detective.jpg" alt="Taal-Detective">
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Ilyas <span class="speaker-badge" style="background-color: rgba(249, 115, 22, 0.2); color: var(--accent-orange); border-color: var(--accent-orange);">Français</span></h3>
-            <p class="fr-text">"Voici notre liste : 1. Rue Charles Buls, 2. Saint-Jean, 3. Rue de la Tête-d'Or, 4. Grand-Place, 5. Pachéco."</p>
-            <p class="nl-text"><strong>Toelichting (NL):</strong> Hier zie je de foto's van de tweetalige bordjes die we hebben onderzocht in de stad.</p>
-        </div>
-
-        <div class="card">
-            <h3>Yassir <span class="speaker-badge">Français</span></h3>
-            <p class="fr-text">"L'après-midi, il a beaucoup plu. Nous sommes allés dans une mosquée du quartier pour le gebed en om te schuilen."</p>
-        </div>
-
-        <div class="section-title">Partie 5: Mission Boulangerie & Fin</div>
-
-        <div class="card">
-            <h3>Yassir <span class="speaker-badge">Français</span></h3>
-            <p class="fr-text">"Pour la 'Mission A', nous avons trouvé un pain au chocolat. Le prix est : deux euros et cinquante centimes."</p>
-            <p class="nl-text"><strong>Toelichting (NL):</strong> Op deze laatste dia staat de Franse prijs van het chocoladebroodje volledig in woorden opgeschreven voor de bakker-opdracht (€2,50).</p>
-        </div>
-
-        <div class="card">
-            <h3>Ilyas <span class="speaker-badge" style="background-color: rgba(249, 115, 22, 0.2); color: var(--accent-orange); border-color: var(--accent-orange);">Français</span></h3>
-            <p class="fr-text">"À seize heures, nous nous sommes rassemblés avec la classe. Nous sommes retournés aux Pays-Bas en bus. C'était une excellente journée !"</p>
-        </div>
-
-        <div class="card">
-            <h3>Ensemble <span class="speaker-badge" style="background-color:rgba(16, 185, 129, 0.2); color:#10b981; border-color:#10b981;">Fin</span></h3>
-            <p class="fr-text" style="text-align: center; font-size: 1.5rem; color: var(--accent-blue); font-weight: bold;">"Merci beaucoup pour votre attention ! Est-ce qu'il y a des questions ?"</p>
-        </div>
-
-        <div class="section-title">Bonus: Bruxelles Quiz & Réflexion</div>
+        <!-- Brussel QUIZ -->
+        <div class="section-title">Brussel QUIZ</div>
         <div class="quiz-container">
             <div class="quiz-item">
-                <p class="quiz-q">1. De Grote Markt staat op de UNESCO-werelderfgoedlijst?</p>
-                <p class="quiz-a"><strong>Waar:</strong> Door het vele goud!</p>
+                <p class="quiz-q">1. De Grote Markt staat op de UNESCO-werelderfgoedlijst.</p>
+                <p class="quiz-a waar">✔ Waar <span class="quiz-explain">Toelichting: Door de vele goud</span></p>
             </div>
             <div class="quiz-item">
-                <p class="quiz-q">2. Manneken Pis heeft meer dan 900 verschillende kostuums?</p>
-                <p class="quiz-a"><strong>Waar:</strong> Er zijn er maar liefst 1200!</p>
+                <p class="quiz-q">2. Manneken Pis heeft meer dan 900 verschillende kostuums.</p>
+                <p class="quiz-a waar">✔ Waar <span class="quiz-explain">Toelichting: Er zijn maar liefst 1200</span></p>
             </div>
             <div class="quiz-item">
-                <p class="quiz-q">3. Het Koninklijk Paleis van Brussel wordt nog steeds gebruikt door de koning?</p>
-                <p class="quiz-a"><strong>Niet waar:</strong> Was afgesloten door de rellen.</p>
+                <p class="quiz-q">3. Het Atomium werd gebouwd voor de Wereldtentoonstelling van 1958.</p>
+                <p class="quiz-a waar">✔ Waar <span class="quiz-explain">Toelichting: Ja, in 1958</span></p>
             </div>
-            <div class="quiz-item" style="margin-top:15px; padding-top:15px; border-top: 1px dashed rgba(255,255,255,0.2);">
-                <p class="quiz-q" style="color:var(--accent-orange)">Reflectie: Wat vonden jullie het leukst?</p>
-                <p class="quiz-a" style="color:var(--text-main)">"Het rondlopen met vrienden en de vrijheid om de opdrachten op je eigen tempo te doen en de vrije tijd waarin je Brussel echt goed kon ontdekken."</p>
+            <div class="quiz-item">
+                <p class="quiz-q">4. In Brussel spreken alle inwoners alleen Frans.</p>
+                <p class="quiz-a niet-waar">✖ Niet waar <span class="quiz-explain">Toelichting: Ze praten ook Nederlands</span></p>
             </div>
+            <div class="quiz-item">
+                <p class="quiz-q">5. Het Europees Parlement in Brussel is het enige parlement van de EU.</p>
+                <p class="quiz-a niet-waar">✖ Niet waar <span class="quiz-explain">Toelichting: Er zijn er ook in Duitsland en Frankrijk</span></p>
+            </div>
+            <div class="quiz-item">
+                <p class="quiz-q">6. Belgische chocolade staat wereldwijd bekend om zijn hoge kwaliteit.</p>
+                <p class="quiz-a waar">✔ Waar <span class="quiz-explain">Toelichting: En ze zijn overheerlijk</span></p>
+            </div>
+            <div class="quiz-item">
+                <p class="quiz-q">7. De metro in Brussel is ouder dan de metro in Parijs.</p>
+                <p class="quiz-a niet-waar">✖ Niet waar <span class="quiz-explain">Toelichting: Die van Parijs was in 1900</span></p>
+            </div>
+            <div class="quiz-item">
+                <p class="quiz-q">8. De Belgische wafel komt oorspronkelijk uit Brussel.</p>
+                <p class="quiz-a waar">✔ Waar <span class="quiz-explain">Toelichting: Heerlijk</span></p>
+            </div>
+            <div class="quiz-item">
+                <p class="quiz-q">9. Het Koninklijk Paleis van Brussel wordt nog steeds gebruikt door de koning.</p>
+                <p class="quiz-a niet-waar">✖ Niet waar <span class="quiz-explain">Toelichting: Door de relingen was afgesloten</span></p>
+            </div>
+            <div class="quiz-item">
+                <p class="quiz-q">10. Brussel heeft meer dan 80 musea.</p>
+                <p class="quiz-a niet-waar">✖ Niet waar <span class="quiz-explain">Toelichting: Nee iets minder namelijk 78</span></p>
+            </div>
+        </div>
+
+        <!-- Reflectie-opdrachten -->
+        <div class="section-title">Reflectie-opdracht</div>
+        <div class="reflection-grid">
+            <div class="reflection-card">
+                <h4>Wat vond je het leukste aan Brussel?</h4>
+                <p>Het leukste aan Brussel was het rond lopen met vrienden en de vrijheid om de opdrachten op je eige tempo te doen en de vrije tijd waar je brussel echt goed kon ontdeken.</p>
+            </div>
+            <div class="reflection-card">
+                <h4>Wat heb je geleerd over België of de EU?</h4>
+                <p>Dat belgië meer is dan alleen maar het eten en drinken zoals de wafels en friet als je echt je tijd neemt dan besef je echt hoe mooi het was.</p>
+            </div>
+        </div>
+
+        <div class="section-title">Wat is één ding dat je is opgevallen in de stad?</div>
+        <div class="quote-box">
+            "Dat je geen supermarkten in de buurt hebt. Ik wou alleen maar een flesje water halen en overal was dat 3 euro voor een klein flesje. Dan wacht ik wel tot we weer in Nederland zijn."
         </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Yassir & Ilyas. Fait avec de la fierté pour le Gerrit Rietveld College.</p>
+        <p>Merci Beaucoup — Présentation par Yassir en Ilyas</p>
     </footer>
 
 </body>
